@@ -7,6 +7,12 @@ const paths = {
   templates : 'templates' // source templates folder
 }
 
+const gh_pages = {
+  gh_acc : 'timweri',
+  branch : 'master'
+}
+
 module.exports = {
-  paths
+  paths,
+  gh_pages
 }
