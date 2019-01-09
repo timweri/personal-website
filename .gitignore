@@ -36,4 +36,4 @@ config.codekit
 *bower_components*
 *.pre-css*
 
-dist/
+docs/
