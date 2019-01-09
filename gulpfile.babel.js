@@ -17,12 +17,14 @@ import source from 'vinyl-source-stream'
 import buffer from 'vinyl-buffer'
 import util from 'gulp-util'
 import browserSync from 'browser-sync'
-import { paths } from './gulp-config.js'
+import { paths, gh_pages } from './gulp-config.js'
+import deploy from 'gulp-gh-pages'
 
 const sync = browserSync.create();
 
 gulp.task('default', gulp.series(clean, gulp.parallel(scripts, styles, images, templates), gulp.parallel(serve, watch)))
 gulp.task('watch', gulp.parallel(serve, watch))
+gulp.task('deploy', gulp.series(clean, gulp.parallel(scripts, styles, images, templates), deploy_gh_pages))
 
 /**
  * Process scripts file with gulp-include into one bundle.
@@ -111,4 +113,15 @@ function watch() {
   gulp.watch(`${paths.src}/${paths.assets}/js/**/*.js`, scripts)
 	gulp.watch(`${paths.src}/${paths.assets}/images/**/*.(png|jpg|jpeg|gif)`, images)
   gulp.watch(`${paths.src}/${paths.templates}/**/*.+(html|njk|njk.html|nunjucks)`, templates)
+}
+
+/**
+ * Deploy to GitHub Pages
+ */
+function deploy_gh_pages() {
+  return gulp.src(`./${paths.out}/**/*`)
+    .pipe(deploy({ 
+      remoteUrl: `https://github.com/${gh_pages.gh_acc}/${gh_pages.gh_acc}.github.io.git`,
+      branch: gh_pages.branch
+    }))
 }
