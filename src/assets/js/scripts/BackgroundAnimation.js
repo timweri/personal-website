@@ -5,6 +5,9 @@
  */
 
 (function () {
+    // Terminate if #stars does not exist
+    if (!$("#stars").length) return
+
     // Settings
     var particleCount = 40,
         flareCount = 10,

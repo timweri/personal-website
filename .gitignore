@@ -36,6 +36,6 @@ config.codekit
 *bower_components*
 *.pre-css*
 
-# gulp
+# Gulp
 dist/
 .publish
