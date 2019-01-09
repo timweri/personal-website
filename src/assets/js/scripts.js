@@ -7,6 +7,7 @@
 //=require plugins/delaunay.js
 //=require scripts/BackgroundAnimation.js
 //=require scripts/PinBackgroundMagicScroll.js
+//=require scripts/HeaderNameAnimation.js
 
 $(function() {
 

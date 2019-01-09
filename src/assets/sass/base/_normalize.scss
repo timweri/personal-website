@@ -313,12 +313,24 @@ fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
 
+
+/**
+ * Padding without increasing size
+ */
+
+* { 
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box; 
+}
+
 /**
  * 1. Correct the text wrapping in Edge and IE.
  * 2. Correct the color inheritance from `fieldset` elements in IE.
  * 3. Remove the padding so developers are not caught out when they zero out
  *    `fieldset` elements in all browsers.
  */
+
 
 legend {
   box-sizing: border-box; /* 1 */

@@ -10,4 +10,4 @@
     .addIndicators({name: "#stars-bg"})
     .addTo(controller)
     console.log('loading magicscroll script')
-})()
+})();
