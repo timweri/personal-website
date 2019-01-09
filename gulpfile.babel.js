@@ -17,12 +17,13 @@ import source from 'vinyl-source-stream'
 import buffer from 'vinyl-buffer'
 import util from 'gulp-util'
 import browserSync from 'browser-sync'
-import { paths } from './gulp-config.js'
+import { paths, gh_pages } from './gulp-config.js'
 
 const sync = browserSync.create();
 
 gulp.task('default', gulp.series(clean, gulp.parallel(scripts, styles, images, templates), gulp.parallel(serve, watch)))
 gulp.task('watch', gulp.parallel(serve, watch))
+gulp.task('build', gulp.series(clean, gulp.parallel(scripts, styles, images, templates)))
 
 /**
  * Process scripts file with gulp-include into one bundle.
