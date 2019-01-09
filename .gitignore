@@ -35,5 +35,3 @@ node_modules
 config.codekit
 *bower_components*
 *.pre-css*
-
-dist/
