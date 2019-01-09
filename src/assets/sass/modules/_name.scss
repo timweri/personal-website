@@ -32,6 +32,17 @@
     margin-top: 0;
 }
 
+.h3-scroll-down {
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    bottom: 50px;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 250px; /* Need a specific value to work */
+    color: rgb(126, 126, 126);
+}
+
 @media (min-width: $medium) {
     .h1-name {
         font-size: 4em;
