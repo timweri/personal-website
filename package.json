@@ -34,6 +34,7 @@
   "dependencies": {
     "jquery": "^3.2.1",
     "modularscale-sass": "^3.0.4",
-    "object-fit-images": "bfred-it/object-fit-images"
+    "object-fit-images": "bfred-it/object-fit-images",
+    "pump": "^3.0.0"
   }
 }

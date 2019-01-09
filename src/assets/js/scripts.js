@@ -1,5 +1,7 @@
 //=require plugins/prevent-console-errors.js
 //=require ../../../node_modules/jquery/dist/jquery.js
+//=require plugins/delaunay.js
+//=require scripts/BackgroundAnimation.js
 
 $(function() {
 
@@ -15,7 +17,5 @@ $(function() {
     breakpoint.refreshValue();
     // Do other things on breakpoint refresh here
   }).resize();
-
-  $(p).text += 'Test'
 
 });

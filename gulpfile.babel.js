@@ -18,9 +18,17 @@ import buffer from 'vinyl-buffer'
 import util from 'gulp-util'
 import browserSync from 'browser-sync'
 import { paths } from './gulp-config.js'
+import pump from 'pump'
 
 const sync = browserSync.create();
 
+gulp.task('uglify-error-debugging', function (cb) {
+  pump([
+    gulp.src('app/**/*.js'),
+    uglify(),
+    gulp.dest('./dist/')
+  ], cb)
+})
 gulp.task('default', gulp.series(clean, gulp.parallel(scripts, styles, images, templates), gulp.parallel(serve, watch)))
 gulp.task('watch', gulp.parallel(serve, watch))
 
