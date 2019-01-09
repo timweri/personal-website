@@ -2,17 +2,11 @@
 
 const paths = {
   src : 'src',            // source parent folder
-  out : 'dist',           // output parent folder
+  out : 'docs',           // output parent folder
   assets : 'assets',      // source assets folder
   templates : 'templates' // source templates folder
 }
 
-const gh_pages = {
-  gh_acc : "timweri",
-  branch : "gh-pages"
-}
-
 module.exports = {
-  paths,
-  gh_pages
+  paths
 }
