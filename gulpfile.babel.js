@@ -120,7 +120,7 @@ function watch() {
  * Deploy to GitHub Pages
  */
 function deploy_gh_pages() {
-  return gulp.src(`./${paths.out}/**/*`)
+  return gulp.src(`./**/*`)
     .pipe(deploy({ 
       remoteUrl: `https://github.com/${gh_pages.gh_acc}/${gh_pages.gh_acc}.github.io.git`,
       branch: gh_pages.branch
