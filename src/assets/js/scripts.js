@@ -1,8 +1,10 @@
 //=require plugins/prevent-console-errors.js
 //=require ../../../node_modules/jquery/dist/jquery.js
-//=require plugins/TweenMax.min.js
+//=require plugins/TweenMax.js
 //=require plugins/TextPlugin.min.js
 //=require plugins/ScrollMagic.min.js
+//=require plugins/animation.gsap.min.js
+//=require plugins/animation.velocity.min.js
 //=require plugins/debug.addIndicators.min.js
 //=require plugins/delaunay.js
 //=require scripts/BackgroundAnimation.js
