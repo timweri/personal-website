@@ -1,7 +1,7 @@
 .scroll-section {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .scroll-section-wrapper {
@@ -12,5 +12,5 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: auto 20px;
+    padding: 0 20px;
 }

@@ -8,6 +8,6 @@
         triggerHook: 'onLeave'
     })
     .setTween(tweenScrollDown)
-    .addIndicators({name: "h3-scroll-down"})
+    //.addIndicators({name: "h3-scroll-down"})
     .addTo(controller)
 })();
