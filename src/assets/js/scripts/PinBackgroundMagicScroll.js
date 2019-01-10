@@ -7,7 +7,6 @@
         pushFollowers: false
     })
     .setPin('#stars-bg')
-    .addIndicators({name: "#stars-bg"})
+    //.addIndicators({name: "#stars-bg"})
     .addTo(controller)
-    console.log('loading magicscroll script')
 })();

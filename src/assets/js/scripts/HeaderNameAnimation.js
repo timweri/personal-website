@@ -4,6 +4,8 @@
         var titles = $e.find('.h2-title')
         var cur = -1
 
+        showNext()
+
         function showNext() {
             ++cur
             titles.eq(cur % titles.length)
@@ -11,7 +13,5 @@
                 .delay(2500)
                 .fadeOut(750, showNext)
         }
-
-        showNext()
     })
 })();
