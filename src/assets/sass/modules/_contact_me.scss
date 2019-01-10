@@ -1,0 +1,47 @@
+#contact-me {
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    align-items: center;
+}
+
+.contact-me-wrapper {
+    padding: 30px 50px;
+    position: relative;
+    top: 100%;
+}
+
+.contact-me-content {
+    p {
+        text-align: center;
+    }
+
+    h1 {
+        margin-top: 0;
+        margin-bottom: 2em;
+    }
+
+    .resume {
+        padding: 20px;
+        margin: auto 10px;
+        font-size: 30px;
+        width: 250px;
+        color: #fff;
+        background-color: rgb(104, 16, 177);
+        span {
+            margin-left: 10px;
+            font-family: 'Roboto Slab', serif;
+            font-size: 25px;
+        }
+    }
+}
+
+@media (min-width: $large) {
+    .contact-me-wrapper {
+        align-items: center;
+    }
+
+    .contact-me-content {
+        width: 1000px;
+    }
+}

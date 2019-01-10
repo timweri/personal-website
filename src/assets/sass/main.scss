@@ -9,8 +9,12 @@
 @import 'base/buttons';
 @import 'base/breakpoint-query';
 
+// Buttons
+@import 'buttons/social_media';
+
 // Modules
 @import 'modules/section';
 @import 'modules/backgroundanimation';
 @import 'modules/name';
 @import 'modules/about_me';
+@import 'modules/contact_me';

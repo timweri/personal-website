@@ -1,0 +1,27 @@
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    margin: auto 10px;
+    font-size: 30px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    transition: .1s ease;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+.fa-github {
+    background: #333;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #0077b5;
+    color: white;
+}
