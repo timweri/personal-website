@@ -1,5 +1,5 @@
 //=require plugins/prevent-console-errors.js
-//=require ../../../node_modules/jquery/dist/jquery.js
+//=require ../../../node_modules/jquery/dist/jquery.min.js
 //=require plugins/TweenMax.min.js
 //=require plugins/TextPlugin.min.js
 //=require plugins/ScrollMagic.min.js
@@ -12,6 +12,7 @@
 //=require scripts/PinBackgroundMagicScroll.js
 //=require scripts/HeaderNameAnimation.js
 //=require scripts/HomeMagicScroll.js
+//=require scripts/RecentWorkSlick.js
 
 $(function() {
 
