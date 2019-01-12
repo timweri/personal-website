@@ -1,0 +1,32 @@
+#recent-work {
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    align-items: center;
+}
+
+.recent-work-item {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 30px 30px;
+    text-align: center;
+    p {
+        text-align: left;
+    }
+}
+
+.recent-work-content {
+    h1 {
+        margin-top: 0;
+        margin-bottom: 2em;
+    }
+}
+
+@media (min-width: $large) {
+    .recent-work-wrapper {
+        align-items: center;
+    }
+
+    .recent-work-content {
+        width: 1000px;
+    }
+}
