@@ -3,7 +3,8 @@
         autoplay: true,
         mobileFirst: true,
         centerMode: true,
-        dots: true
+        dots: true,
+        adaptiveHeight: true
     })
     console.log('loaded slick')
 })();
