@@ -7,8 +7,10 @@
 
   {# Add your site or application content here #}
   {% include "modules/mod_star_canvas.njk" %}
-  {% include "modules/mod_name.njk" %}
-  {% include "modules/mod_about_me.njk" %}
-  {% include "modules/mod_recent_work.njk" %}
-  {% include "modules/mod_contact_me.njk" %}
+  <div id="fullpage">
+    {% include "modules/mod_name.njk" %}
+    {% include "modules/mod_about_me.njk" %}
+    {% include "modules/mod_recent_work.njk" %}
+    {% include "modules/mod_contact_me.njk" %}
+  </div>
 {% endblock content %}

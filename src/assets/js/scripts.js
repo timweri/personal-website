@@ -8,11 +8,14 @@
 //=require plugins/debug.addIndicators.min.js
 //=require plugins/slick.min.js
 //=require plugins/delaunay.js
+//=require plugins/fullpage.min.js
+//=require plugins/scrolloverflow.min.js
 //=require scripts/BackgroundAnimation.js
 //=require scripts/PinBackgroundMagicScroll.js
 //=require scripts/HeaderNameAnimation.js
 //=require scripts/HomeMagicScroll.js
 //=require scripts/RecentWorkSlick.js
+//=require scripts/FullPage.js
 
 $(function() {
 

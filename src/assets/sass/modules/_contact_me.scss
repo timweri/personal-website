@@ -8,7 +8,6 @@
 .contact-me-wrapper {
     padding: 30px 50px;
     position: relative;
-    top: 100%;
 }
 
 .contact-me-content {
@@ -17,7 +16,6 @@
     }
 
     h1 {
-        margin-top: 0;
         margin-bottom: 2em;
     }
 
@@ -42,6 +40,7 @@
     }
 
     .contact-me-content {
+
         width: 1000px;
     }
 }

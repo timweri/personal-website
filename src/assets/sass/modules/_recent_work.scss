@@ -38,6 +38,13 @@
     }
 }
 
+.recent-work-content {
+    h1 {
+        margin-top: 0;
+        margin-bottom: 2em;
+    }
+}
+
 .recent-work-wrapper {
     padding: 0;
 }
@@ -47,15 +54,14 @@
     padding: 30px 30px;
     margin: 0 7.5px;
     text-align: center;
+    h2 {
+        margin-top: 0;
+    }
     p {
         text-align: left;
-    }
-}
-
-.recent-work-content {
-    h1 {
-        margin-top: 0;
-        margin-bottom: 2em;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
