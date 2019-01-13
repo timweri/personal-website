@@ -3,6 +3,39 @@
     font-family: 'Roboto Slab', serif;
     display: flex;
     align-items: center;
+    .slick-track {
+        display: flex;
+    }
+    .slick-slide {
+        height: auto;
+        justify-content: center;
+    }
+    .slick-dots li {
+        button {
+            &::before {
+                color: #DCDCDC;
+            }
+        }
+        &.slick-active {
+            button {
+                &::before {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .slick-next, .slick-prev {
+        width: auto;
+        &::before {
+            content: "";
+        }
+    }
+    .fa {
+        color: #fff;
+        width: auto;
+        padding: 0;
+        margin: auto;
+    }
 }
 
 .recent-work-wrapper {
@@ -27,6 +60,16 @@
 }
 
 @media (min-width: $large) {
+    #recent-work {
+        .slick-dots li {
+            button {
+                &::before {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
     .recent-work-wrapper {
         align-items: center;
     }
