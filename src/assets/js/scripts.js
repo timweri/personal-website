@@ -13,7 +13,6 @@
 //=require scripts/BackgroundAnimation.js
 //=require scripts/PinBackgroundMagicScroll.js
 //=require scripts/HeaderNameAnimation.js
-//=require scripts/HomeMagicScroll.js
 //=require scripts/RecentWorkSlick.js
 //=require scripts/FullPage.js
 
