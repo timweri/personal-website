@@ -43,6 +43,9 @@
         margin-top: 0;
         margin-bottom: 2em;
     }
+    h3 {
+        margin-top: -18px;
+    }
 }
 
 .recent-work-wrapper {
@@ -65,17 +68,7 @@
     }
 }
 
-@media (min-width: $large) {
-    #recent-work {
-        .slick-dots li {
-            button {
-                &::before {
-                    font-size: 30px;
-                }
-            }
-        }
-    }
-
+@media (min-width: $medium) {
     .recent-work-wrapper {
         align-items: center;
     }
