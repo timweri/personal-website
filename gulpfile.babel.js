@@ -22,10 +22,10 @@ import deploy from 'gulp-gh-pages'
 
 const sync = browserSync.create();
 
-gulp.task('default', gulp.series(clean, gulp.parallel(scripts, styles, images, templates), gulp.parallel(serve, watch)))
+gulp.task('default', gulp.series(clean, gulp.parallel(scripts, styles, images, fonts, templates), gulp.parallel(serve, watch)))
 gulp.task('watch', gulp.parallel(serve, watch))
-gulp.task('build', gulp.series(clean, gulp.parallel(scripts, styles, images, templates)))
-gulp.task('deploy', gulp.series(clean, gulp.parallel(scripts, styles, images, templates), deploy_gh_pages))
+gulp.task('build', gulp.series(clean, gulp.parallel(scripts, styles, images, fonts, templates)))
+gulp.task('deploy', gulp.series(clean, gulp.parallel(scripts, styles, images, fonts, templates), deploy_gh_pages))
 
 /**
  * Process scripts file with gulp-include into one bundle.
@@ -56,6 +56,15 @@ function styles() {
 				.on('error', util.log)
 		.pipe(sourcemaps.write(`.`))
 		.pipe(gulp.dest(`${paths.out}/${paths.assets}/css`))
+		.pipe(sync.stream())
+}
+
+/**
+ * Process font folder.
+ */
+function fonts() {
+	return gulp.src(`${paths.src}/${paths.assets}/fonts/*.+(eot|svg|ttf|woff)`)
+		.pipe(gulp.dest(`${paths.out}/${paths.assets}/fonts`))
 		.pipe(sync.stream())
 }
 
@@ -112,7 +121,8 @@ function clean() {
 function watch() {
 	gulp.watch(`${paths.src}/${paths.assets}/sass/**/*.+(scss|sass)`, styles)
   gulp.watch(`${paths.src}/${paths.assets}/js/**/*.js`, scripts)
-	gulp.watch(`${paths.src}/${paths.assets}/images/**/*.(png|jpg|jpeg|gif)`, images)
+  gulp.watch(`${paths.src}/${paths.assets}/images/**/*.(png|jpg|jpeg|gif)`, images)
+  gulp.watch(`${paths.src}/${paths.assets}/fonts/*.+(eot|svg|ttf|woff)`, fonts)
   gulp.watch(`${paths.src}/${paths.templates}/**/*.+(html|njk|njk.html|nunjucks)`, templates)
 }
 
