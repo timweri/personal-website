@@ -22,10 +22,10 @@ import deploy from 'gulp-gh-pages'
 
 const sync = browserSync.create();
 
-gulp.task('default', gulp.series(clean, gulp.parallel(scripts, styles, images, fonts, templates), gulp.parallel(serve, watch)))
+gulp.task('default', gulp.series(clean, gulp.parallel(scripts, styles, images, fonts, documents, templates), gulp.parallel(serve, watch)))
 gulp.task('watch', gulp.parallel(serve, watch))
-gulp.task('build', gulp.series(clean, gulp.parallel(scripts, styles, images, fonts, templates)))
-gulp.task('deploy', gulp.series(clean, gulp.parallel(scripts, styles, images, fonts, templates), deploy_gh_pages))
+gulp.task('build', gulp.series(clean, gulp.parallel(scripts, styles, images, fonts, documents, templates)))
+gulp.task('deploy', gulp.series(clean, gulp.parallel(scripts, styles, images, fonts, documents, templates), deploy_gh_pages))
 
 /**
  * Process scripts file with gulp-include into one bundle.
@@ -65,6 +65,15 @@ function styles() {
 function fonts() {
 	return gulp.src(`${paths.src}/${paths.assets}/fonts/*.+(eot|svg|ttf|woff)`)
 		.pipe(gulp.dest(`${paths.out}/${paths.assets}/fonts`))
+		.pipe(sync.stream())
+}
+
+/**
+ * Process documents folder.
+ */
+function documents() {
+	return gulp.src(`${paths.src}/${paths.assets}/documents/*.+(pdf)`)
+		.pipe(gulp.dest(`${paths.out}/${paths.assets}/documents`))
 		.pipe(sync.stream())
 }
 
